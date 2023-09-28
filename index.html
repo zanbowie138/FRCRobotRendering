@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Loading Test</title>
+  </head>
+  <body>
+    <div class="webgl-canvas__container">
+      <div class="progress-loader">
+        <progress value="0" max="100" id="progressBar"></progress>
+        <h2 id="progressBarLabel">Loading...</h2>
+      </div>
+    </div>
+    <script type="module" src="/src/entry.ts"></script>
+  </body>
+  <style>
+    .progress-loader > progress {
+      width: 500px;
+      height: 24px;
+    }
+
+    .progress-loader > h2 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .progress-loader {
+      position: absolute;
+      width: fit-content;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+    body {
+      margin: 0px;
+    }
+  </style>
+</html>
