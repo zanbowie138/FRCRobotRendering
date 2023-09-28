@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {WebGL} from './WebGL';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder }from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import Stats from 'stats.js'
 
 
@@ -15,6 +16,7 @@ export class Frame extends WebGL {
 
     private loadGLTF() {
         const loader = new GLTFLoader();
+        loader.setMeshoptDecoder(MeshoptDecoder);
 
         // Get progress bar with tag "progressBar"
         const progressBar = document.getElementById(
@@ -35,7 +37,7 @@ export class Frame extends WebGL {
         // Load a glTF resource
         loader.load(
             // resource URL
-            'models/robot/frc_robot.gltf',
+            'models/robot/robot_compressed.gltf',
 
             // called when the resource is loaded
             ( gltf ) => {
