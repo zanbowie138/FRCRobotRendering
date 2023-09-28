@@ -67,7 +67,7 @@ export class Frame extends WebGL {
 
                 // Update progress bar
                 progressBar.value = percentComplete === Infinity ? 100 : percentComplete;
-                label.textContent = "Loading... " + percentComplete + "%";
+                label.textContent = "Loading... " + Math.min(percentComplete, 100) + "%";
             },
             // called when loading has errors
             function ( error ) {
