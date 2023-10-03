@@ -37,7 +37,7 @@ export class Frame extends WebGL {
         // Load a glTF resource
         loader.load(
             // resource URL
-            'models/robot/robot_compressed.gltf',
+            'models/robot/robot_ultra.gltf',
 
             // called when the resource is loaded
             ( gltf ) => {
